@@ -169,7 +169,8 @@ Project Link: [https://github.com/SilasRodrigues19/Google-Search-API](https://gi
 [product-screenshot4]: /public/images/preview4.png
 [product-screenshot5]: /public/images/preview5.png
 
-<hr>
+<br>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
