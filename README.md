@@ -122,6 +122,10 @@ https://rapidapi.com/apigeek/api/google-search3
    ```sh
    npm install
    ```
+3. Open the link below to view the app it in your browser.
+   ```sh
+     http://localhost:3000
+   ```
 
 <!-- CONTRIBUTING -->
 
