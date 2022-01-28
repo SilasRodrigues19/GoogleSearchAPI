@@ -49,11 +49,11 @@
 
 ## About The Project
 
-[![Preview][product-screenshot]](https://google-search-two.vercel.app/search)
-[![Preview][product-screenshot2]](https://google-search-two.vercel.app/search)
-[![Preview][product-screenshot3]](https://google-search-two.vercel.app/search)
-[![Preview][product-screenshot4]](https://google-search-two.vercel.app/search)
-[![Preview][product-screenshot5]](https://google-search-two.vercel.app/search)
+[![Preview][product-screenshot]](https://google-search-two.vercel.app/search)<hr>
+[![Preview][product-screenshot2]](https://google-search-two.vercel.app/search)<hr>
+[![Preview][product-screenshot3]](https://google-search-two.vercel.app/search)<hr>
+[![Preview][product-screenshot4]](https://google-search-two.vercel.app/search)<hr>
+[![Preview][product-screenshot5]](https://google-search-two.vercel.app/search)<hr>
 
 Project developed in a JavaScript Mastery channel tutorial to learn React best practices, creating modern user interfaces using Tailwind CSS and most importantly, learn to fetch data from Google Search API using RapidAPI.
 
