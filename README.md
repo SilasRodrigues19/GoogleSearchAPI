@@ -9,7 +9,7 @@
 <samp>
 <p align="center">
   <a href="https://github.com/SilasRodrigues19/Google-Search-API">
-    <img src="https://cdn.dribbble.com/users/1677939/screenshots/8817404/google_icon_-_dribbble.jpg" alt="Logo" width="80" height="80">
+    <img src="https://cdn.dribbble.com/users/1677939/screenshots/8817404/google_icon_-_dribbble.jpg" alt="Logo" width="100" height="80">
   </a>
 
   <h3 align="center">Google Search API</h3>
@@ -18,7 +18,7 @@
     Search data with the google search API
     <br />
     <a href="https://google-search-two.vercel.app/search">Demo</a>
-    <a href="https://github.com/SilasRodrigues19/Google-Search-API/issues"></a>
+    <a href="https://github.com/SilasRodrigues19/Google-Search-API/issues">Report Bug</a>
   </p>
 </p>
 
