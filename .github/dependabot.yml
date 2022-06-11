@@ -1,0 +1,29 @@
+# Configuração básica para três gerenciadores de pacotes
+
+version: 2
+updates:
+  # Manter dependências para o GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+
+  # Manter dependências para npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    # Labels específicas pra PR'S do npm
+    labels:
+      - "npm"
+      - "dependencies"
+    commit-message:
+      # Prefixo de todos commits com "build"
+      prefix: "build"
+      # Usuários que vão revisar os PR's
+    reviewers:
+      - "SilasRodrigues19"
+      # Usuários responsáveis
+    assignees:
+      - "SilasRodrigues19"
+    open-pull-requests-limit: 10
