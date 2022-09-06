@@ -19,7 +19,7 @@ updates:
       - "dependencies"
     commit-message:
       # Prefixo de todos commits com "build"
-      prefix: "build"
+      prefix: "chore(deps)"
       # Usuários que vão revisar os PR's
     reviewers:
       - "SilasRodrigues19"
