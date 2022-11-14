@@ -13,7 +13,10 @@ export const Results = () => {
     if (searchTerm !== "") {
       if (location.pathname === "/videos") {
         getResults(`/search/q=${searchTerm} videos`);
-      } else {
+      } else if(location.pathname === '/images') {
+        getResults(`/search/q=${searchTerm} images`);
+      } 
+      else {
         getResults(`${location.pathname}/q=${searchTerm}&num=40`);
       }
     }
@@ -42,8 +45,8 @@ export const Results = () => {
     case "/images":
       return (
         <div className="flex flex-wrap justify-center items-center">
-          {results?.image_results?.map(
-            ({ image, link: { href, title } }, index) => (
+          {results?.results?.map(
+            ({ title, link, additional_links: {href, size} }, index) => (
               <div className="sm:flex flex-1 w-110">
                 <a
                   href={href}
@@ -53,7 +56,7 @@ export const Results = () => {
                   className="sm:p-3 p-5"
                 >
                   <img
-                    src={image?.src}
+                    src={link}
                     alt={title}
                     loading="lazy"
                     className="sm:w-150"
