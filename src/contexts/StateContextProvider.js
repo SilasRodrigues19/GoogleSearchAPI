@@ -19,6 +19,11 @@ export const StateContextProvider = ({ children }) => {
         'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
         'X-RapidAPI-Host': 'google-search72.p.rapidapi.com',
       },
+      params: {
+        gl: 'br',
+        num: 20,
+        sort: 'relevance',
+      },
     });
 
     const data = await res.json();

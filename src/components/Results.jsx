@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import ReactPlayer from 'react-player';
 
 import { useStateContext } from '../contexts/StateContextProvider';
 import { Loading } from './Loading';
@@ -9,6 +8,8 @@ export const Results = () => {
   const { results, loading, getResults, searchTerm } = useStateContext();
   const location = useLocation();
 
+  const limitResultsPerPage = 20;
+
   useEffect(() => {
     if (searchTerm !== '') {
       if (location.pathname === '/videos') {
@@ -16,9 +17,12 @@ export const Results = () => {
       } else if (location.pathname === '/images') {
         getResults(`/imagesearch?query=${searchTerm}`);
       } else {
-        getResults(`${location.pathname}?query=${searchTerm}&num=20`);
+        getResults(
+          `${location.pathname}?query=${searchTerm}&num=${limitResultsPerPage}`
+        );
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchTerm, location.pathname]);
 
   if (loading) return <Loading />;
@@ -26,24 +30,35 @@ export const Results = () => {
   switch (location.pathname) {
     case '/search':
       return (
-        <div className='sm:px-56 flex flex-wrap justify-between space-y-6'>
-          {results?.items?.map((item, index) => (
-            <div key={index} className='md:w-2/5 w-full'>
-              <a
-                className='text-sm'
-                href={item.link}
-                target='_blank'
-                rel='noreferrer'
-              >
-                {item.title}
-              </a>
-              <p className='text-lg hover:underline dark:text-blue-300 text-blue-700'>
-                {item.snippet}
+        <>
+          {results?.estimatedResultCount && (
+            <div className='my-4'>
+              <p>
+                Total results: {results.estimatedResultCount.toLocaleString()}
               </p>
+              <p>Limit result per page: {limitResultsPerPage}</p>
             </div>
-          ))}
-        </div>
+          )}
+          <div className='sm:px-56 flex flex-wrap justify-between space-y-6'>
+            {results?.items?.map((item, index) => (
+              <div key={index} className='md:w-2/5 w-full'>
+                <a
+                  className='text-sm'
+                  href={item.link}
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  {item.title}
+                </a>
+                <p className='text-lg hover:underline dark:text-blue-300 text-blue-700'>
+                  {item.snippet}
+                </p>
+              </div>
+            ))}
+          </div>
+        </>
       );
+
     case '/images':
       return (
         <div className='flex flex-wrap justify-center items-center'>
