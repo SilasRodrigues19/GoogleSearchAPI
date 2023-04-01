@@ -4,10 +4,20 @@ import { NavLink } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 
 const links = [
-  { url: '/search', text: 'All', icon: 'ph:folder-open-light' },
-  { url: '/news', text: 'News', icon: 'ph:newspaper-light', disabled: true },
-  { url: '/images', text: 'Images', icon: 'clarity:image-line' },
-  { url: '/videos', text: 'Videos', icon: 'uil:video', disabled: true },
+  { url: '/search', text: 'All', icon: 'material-symbols:border-all-rounded' },
+  { url: '/images', text: 'Images', icon: 'solar:gallery-bold' },
+  {
+    url: '/news',
+    text: 'News',
+    icon: 'material-symbols:breaking-news-alt-1',
+    disabled: true,
+  },
+  {
+    url: '/videos',
+    text: 'Videos',
+    icon: 'ph:monitor-play-bold',
+    disabled: true,
+  },
 ];
 
 export const Links = () => (
@@ -16,8 +26,10 @@ export const Links = () => (
       <NavLink
         key={index}
         to={url}
-        activeClassName='text-blue-500 border-b-2 dark:text-blue-300 border-blue-500 pb-2'
-        className={`flex ${disabled ? 'disabled cursor-not-allowed' : ''}`}
+        activeClassName='text-blue-500 border-b-2 dark:text-blue-300 border-blue-500'
+        className={`flex py-2 ${
+          disabled ? 'disabled cursor-not-allowed text-gray-400' : ''
+        }`}
         title={disabled ? 'This link is disabled' : ''}
         onClick={(e) => disabled && e.preventDefault()}
       >

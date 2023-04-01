@@ -10,7 +10,7 @@ export const Navbar = ({ setDarkTheme, darkTheme }) => (
     <div className="flex justify-between items-center space-x-5 w-screen ">
       <Link to="/">
         <p className="flex text-2xl font-bold text-gray-500 py-1 px-2 rounded dark:text-white">
-          Google <Icon icon="la:search" className="mt-1 ml-2" />
+          Google Search <Icon icon="la:search" className="mt-1 ml-2" />
         </p>
       </Link>
       <button type="button" onClick={() => setDarkTheme(!darkTheme)} className="text-xl dark:text-gray-900 px-2 py-1">
