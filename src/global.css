@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  overflow: overlay
+}
+
+::-webkit-scrollbar {
+  padding-right: 5px;
+  width: 8px;
+  background: 0 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
