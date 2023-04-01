@@ -51,9 +51,25 @@
 
 [![Preview][product-screenshot]](https://google-search-two.vercel.app/search)<hr>
 [![Preview][product-screenshot2]](https://google-search-two.vercel.app/search)<hr>
-[![Preview][product-screenshot3]](https://google-search-two.vercel.app/search)<hr>
-[![Preview][product-screenshot4]](https://google-search-two.vercel.app/search)<hr>
-[![Preview][product-screenshot5]](https://google-search-two.vercel.app/search)<hr>
+[![Preview][product-screenshot4]](https://google-search-two.vercel.app/images)<hr>
+
+
+###### NOTE: The API that was used has been deprecated, at the moment the project is using the API [google-search72](https://rapidapi.com/neoscrap-net/api/google-search72/pricing/) which has some limitations.
+
+###### The `/news` and `/videos` endpoints no longer exist in this new API, but I've kept the old screenshots below as a matter of curiosity.
+
+###### Expanding and collapsing the item below, you can see the deprecated endpoints `/news` and `/videos`.
+
+
+<details>
+  <summary>Deprecated endpoints</summary>
+
+  [![Preview][product-screenshot3]](https://google-search-two.vercel.app/news)<hr>
+  [![Preview][product-screenshot5]](https://google-search-two.vercel.app/videos)
+
+</details>
+
+<hr>
 
 Project developed in a JavaScript Mastery channel tutorial to learn React best practices, creating modern user interfaces using Tailwind CSS and most importantly, learn to fetch data from Google Search API using RapidAPI.
 
@@ -62,9 +78,9 @@ The website is divided into:
 - **Input**: enter text to search google api.
 - **Toggle Button**: switch between light and dark themes.
 - **Home**: shows some results for your search.
-- **News Tab**: shows some news related to your search.
+- **News Tab**: [DEPRECATED] shows some news related to your search.
 - **Images Tab**: shows some images related to your search.
-- **Videos Tab**: shows some videos related to your search.
+- **Videos Tab**: [DEPRECATED]  shows some videos related to your search.
 
 ### Built With
 
@@ -85,13 +101,15 @@ Technologies used in the project.
 
 ### Prerequisites
 
-1. Create an account on RapidAPI in the link below.
+1. Create an account on RapidAPI and access the link below.
 
 ```sh
-https://rapidapi.com/apigeek/api/google-search3
+https://rapidapi.com/neoscrap-net/api/google-search72/pricing/
 ```
 
-2. Copy the x-rapidapi-key code that will be used in the .env file.
+2. Choose your plan and subscribe (This project uses the free version)
+
+3. Access [google-search72 - endpoints](https://rapidapi.com/neoscrap-net/api/google-search72), copy the x-rapidapi-key code that will be used in the .env file.
 
 ```sh
   const res = await fetch(`${baseUrl}${url}`, {
@@ -104,13 +122,13 @@ https://rapidapi.com/apigeek/api/google-search3
     });
 ```
 
-3. Create a file named .env copy the code below and paste in it (replace the value after the equal with your x-rapidapi-key).
+4. Put the value of `x-rapidapi-key` in the key `REACT_APP_API_KEY` and rename the file from `.env.example` to `.env`
 
 ```sh
-  REACT_APP_API_KEY = 123456789123456789
+  REACT_APP_API_KEY=your-x-rapidapi-key
 ```
 
-4. If you have an application running, stop the server and run it again to work the environment variable.
+5. If you have an application running, stop the server and run it again to work the environment variable.
 
 ### Installation
 
